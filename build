@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo "copie de dev vers war"
+
+rm -rf war
+rm -rf intermediates
+
+mkdir intermediates 2>/dev/null
+mkdir war 2>/dev/null
+mkdir war/css
+mkdir war/img
+
+cp -R dev/WEB-INF war/
+cp -R dev/* intermediates/
+
+
+echo "compression des css"
+cd intermediates/css
+java -jar ../../tools/yuicompressor-2.4.7.jar --type="css" -v -o '../../war/css/style.css' style.css
+cd -
+
+echo "compression html"
+cd intermediates
+java -jar ../tools/htmlcompressor-1.5.3.jar --type html --recursive --mask *.html --compress-css -o ../war .
+cd -
+
+echo "optimisation des images png"
+cp intermediates/img/* war/img
+cd war/img
+optipng -o7 *.png
+cd -
+
+echo "optimisation des images jpeg"
+find war/img -name "*.jpeg"|xargs -I{} -n1 jpegtran -v -copy none -optimize -outfile {} {}
+find war/img -name "*.jpg"|xargs -I{} -n1 jpegtran -v -copy none -optimize -outfile {} {}
