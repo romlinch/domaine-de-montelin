@@ -104,6 +104,10 @@ body {
 	background-color: rgba(41, 15, 39, 0.8); /*mauve*/
 }
 
+#content p {
+	font-size: 1.2em;
+}
+
 #content h1, #content h2 {
 	text-align: left;
 }
@@ -129,6 +133,13 @@ body {
 	margin: 0 1em 0 0;
 }
 
+#content ul {
+	margin: 0;
+	padding-left: 1em;
+	color: rgb(255, 216, 25); /*jaune*/
+	list-style: square;
+	list-style-position: inside;
+}
 
 /**
  * Pied de page
@@ -200,7 +211,7 @@ body {
 	right: 6.25em; /*100/16*/
 	position: fixed;
 	z-index: -9999;
-	background: url("img/right_logo.jpg") no-repeat transparent;
+	background: url("../img/right_logo.jpg") no-repeat transparent;
 	background-position: right;
 }
 
