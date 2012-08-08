@@ -17,6 +17,8 @@ cp -R dev/* intermediates/
 echo "compression des css"
 cd intermediates/css
 java -jar ../../tools/yuicompressor-2.4.7.jar --type="css" -v -o '../../war/css/style.css' style.css
+java -jar ../../tools/yuicompressor-2.4.7.jar --type="css" -v -o '../../war/css/other.css' other.css
+java -jar ../../tools/yuicompressor-2.4.7.jar --type="css" -v -o '../../war/css/print.css' print.css
 cd -
 
 echo "compression html"
@@ -33,3 +35,5 @@ cd -
 echo "optimisation des images jpeg"
 find war/img -name "*.jpeg"|xargs -I{} -n1 jpegtran -v -copy none -optimize -outfile {} {}
 find war/img -name "*.jpg"|xargs -I{} -n1 jpegtran -v -copy none -optimize -outfile {} {}
+
+cp dev/*.ico war
