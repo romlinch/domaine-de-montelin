@@ -1,1 +1,80 @@
-@CHARSET "UTF-8";@media screen{body{padding-top:3.125em;padding-bottom:3.125em}#incrustation{left:0;top:0;bottom:0;right:6.25em;position:fixed;z-index:-9999;background:url("../img/right_logo.jpg") no-repeat transparent;background-position:right}#layout{width:98%;margin-left:auto;margin-right:auto}#header{padding-right:6.25em;-moz-border-top-right-radius:.6em;-moz-border-top-left-radius:.6em;-webkit-border-top-left-radius:.6em;-webkit-border-top-right-radius:.6em;border-top-left-radius:.6em;border-top-right-radius:.6em}#logo{padding-left:3.125em}#titre{font-size:3em}#content{padding:.625em 2em 2em 2em;-webkit-border-bottom-right-radius:.6em;-webkit-border-bottom-left-radius:.6em;-moz-border-bottom-right-radius:.6em;-moz-border-bottom-left-radius:.6em;border-bottom-right-radius:.6em;border-bottom-left-radius:.6em;background-color:rgba(41,15,39,0.8)}#content img.incrust{width:22em;float:left}#footer{padding-top:2em}#signature{margin-right:4.4em}}@media screen and (min-width:60em){#layout{width:60em}}
+@CHARSET "UTF-8";
+
+@media screen {
+	body {
+		padding-top: 3.125em; /*50px/16px*/
+		padding-bottom: 3.125em; /*50px/16px*/
+	}
+	#incrustation {
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 6.25em; /*100/16*/
+		position: fixed;
+		z-index: -9999;
+		background: url("../img/right_logo.jpg") no-repeat transparent;
+		background-position: right;
+	}
+	#layout {
+		width: 98%; /*960 / 16*/
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/**
+ * En tête
+ */
+	#header {
+		padding-right: 6.25em; /*100/16*/
+		-moz-border-top-right-radius: 0.6em;
+		-moz-border-top-left-radius: 0.6em;
+		-webkit-border-top-left-radius: 0.6em;
+		-webkit-border-top-right-radius: 0.6em;
+		border-top-left-radius: 0.6em;
+		border-top-right-radius: 0.6em;
+	}
+	#logo {
+		padding-left: 3.125em; /*50/16*/
+	}
+	#titre {
+		font-size: 3em; /*48/16*/
+	}
+
+	/**
+ * Contenu
+ */
+	#content {
+		padding: 0.625em 2em 2em 2em;
+		-webkit-border-bottom-right-radius: 0.6em;
+		-webkit-border-bottom-left-radius: 0.6em;
+		-moz-border-bottom-right-radius: 0.6em;
+		-moz-border-bottom-left-radius: 0.6em;
+		border-bottom-right-radius: 0.6em;
+		border-bottom-left-radius: 0.6em;
+		background-color: rgba(41, 15, 39, 0.8); /*mauve*/
+	}
+	#content img.incrust {
+		width: 22em;
+		float: left;
+	}
+
+	/**
+ * Pied de page
+ */
+	#footer {
+		padding-top: 2em;
+	}
+
+	/**
+ * Signature
+ */
+	#signature {
+		margin-right: 4.4em;
+	}
+}
+
+@media screen and (min-width: 60em) {
+	#layout {
+		width: 60em; /*960 / 16*/
+	}
+}
