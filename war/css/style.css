@@ -129,7 +129,7 @@
 	}
 	#content img.incrust {
 		width: 100%;
-		margin: 0 1em 0 0;
+		margin: 0 1em 1em 0;
 	}
 	#content ul {
 		margin: 0;
@@ -209,7 +209,8 @@
 	/**
  * Signature
  */
-	#signature {
+	.signature {
+		white-space: nowrap;
 		font-family: 'Herr Von Muellerhoff' !important;
 		padding: 0;
 		margin: 0;
@@ -218,9 +219,31 @@
 		margin-right: auto;
 		margin-left: auto;
 		text-align: center;
+		transform: rotate(-15deg);
 		-moz-transform: rotate(-15deg);
 		-webkit-transform: rotate(-15deg);
 		-o-transform: rotate(-15deg);
+	}
+	
+	.signature.info {
+		float: right;
+		clear: right;
+		margin-right: 10%;
+		/* margin: 0 15% 0 auto;
+		clear: both; */
+	}
+	
+	.text.info {
+		text-transform: uppercase;
+	}
+	
+	.clear {
+		clear: both;
+	}
+	
+	/*Suppression des tarifs*/
+	#menu li:nth-child(4) {
+		display: none;
 	}
 }
 
