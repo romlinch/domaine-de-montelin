@@ -26,14 +26,14 @@ cd intermediates
 java -jar ../tools/htmlcompressor-1.5.3.jar --type html --recursive --mask *.html --compress-css -o ../war .
 cd -
 
-echo "optimisation des images png"
+#echo "optimisation des images png"
 cp intermediates/img/* war/img
-cd war/img
-optipng -o7 *.png
-cd -
+#cd war/img
+#optipng -o7 *.png
+#cd -
 
-echo "optimisation des images jpeg"
-find war/img -name "*.jpeg"|xargs -I{} -n1 jpegtran -v -copy none -optimize -outfile {} {}
-find war/img -name "*.jpg"|xargs -I{} -n1 jpegtran -v -copy none -optimize -outfile {} {}
+#echo "optimisation des images jpeg"
+#find war/img -name "*.jpeg"|xargs -I{} -n1 jpegtran -v -copy none -optimize -outfile {} {}
+#find war/img -name "*.jpg"|xargs -I{} -n1 jpegtran -v -copy none -optimize -outfile {} {}
 
 cp dev/*.ico war
