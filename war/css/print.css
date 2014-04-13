@@ -1,1 +1,61 @@
-@CHARSET "UTF-8";@media print{#soustitre{display:none}#content{font-size:.9em}#content img{display:none}a{color:black}#incrustation{display:none}#menu{display:none}#logo{display:none}#carte{width:100%;margin-left:auto;margin-right:auto;padding:.4em}#carte img{display:block}#footer{text-align:center}.abus{display:none}#signature{text-align:center}}
+@CHARSET "UTF-8";
+
+@media print {
+	#soustitre {
+		display: none;
+	}
+	
+	#content {
+		font-size: 0.9em;
+	}
+	
+	#content img {
+		display: none;
+	}
+	
+	a {
+		color: black;
+	}
+	
+	#incrustation {
+		display: none;
+	}
+
+	#menu {
+		display: none;
+	}
+	
+	#logo {
+		display: none;
+	}
+
+	#carte {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0.4em;
+	}
+	
+	#carte img {
+		display: block;
+	}
+
+	/**
+ * Pied de page
+ */
+	#footer {
+		text-align: center;
+	}
+	
+	.abus {
+		display: none;
+	}
+
+	/**
+ * Signature
+ */
+	#signature {
+		text-align: center;
+	}
+}
+
